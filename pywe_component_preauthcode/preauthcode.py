@@ -24,7 +24,7 @@ class PreAuthCode(BasePreAuthCode):
         self.update_params(appid=appid, secret=secret, storage=storage)
         # Component PreAuthCode Request
         token = component_access_token(appid=self.appid, secret=self.secret, storage=self.storage)
-        component_preauthcode_info = self.post(self.WECHAT_COMPONENT_PREAUTHCODE.format({'component_access_token': token}), data={
+        component_preauthcode_info = self.post(self.WECHAT_COMPONENT_PREAUTHCODE.format(component_access_token=token), data={
             'component_appid': self.appid,
         })
         # Request Error
