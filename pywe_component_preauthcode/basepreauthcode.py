@@ -14,7 +14,7 @@ class BasePreAuthCode(BaseWechat):
         self.pre_auth_code = pre_auth_code
         self.storage = storage or MemoryStorage()
 
-        if self.token:
+        if self.pre_auth_code:
             expires_in = 1800
             component_preauthcode_info = {
                 'pre_auth_code': self.pre_auth_code,

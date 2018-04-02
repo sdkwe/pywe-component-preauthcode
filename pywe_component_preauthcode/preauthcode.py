@@ -51,8 +51,8 @@ class PreAuthCode(BasePreAuthCode):
     def refresh_component_preauthcode(self, appid=None, secret=None, storage=None):
         return self.__fetch_component_preauthcode(appid, secret, storage)
 
-    def final_component_preauthcode(self, cls=None, appid=None, secret=None, token=None, storage=None):
-        return token or self.component_preauthcode(appid or cls.appid, secret or cls.secret, storage=storage or cls.storage)
+    def final_component_preauthcode(self, cls=None, appid=None, secret=None, pre_auth_code=None, storage=None):
+        return pre_auth_code or self.component_preauthcode(appid or cls.appid, secret or cls.secret, storage=storage or cls.storage)
 
 
 preauthcode = PreAuthCode()

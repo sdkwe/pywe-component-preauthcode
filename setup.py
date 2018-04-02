@@ -7,7 +7,7 @@ version = '1.0.0'
 
 
 setup(
-    name='pywe-component-token',
+    name='pywe-component-preauthcode',
     version=version,
     keywords='Wechat Weixin Component PreAuthCode',
     description='Wechat Component PreAuthCode Module for Python.',
